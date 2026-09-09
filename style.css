@@ -34,18 +34,29 @@ body{
 }
 
 .profile-img{
-    width:180px;
-    height:180px;
+    width:320px;
+    height:320px;
     object-fit:cover;
     border-radius:50%;
-    border:5px solid #38bdf8;
-    box-shadow:0 0 35px rgba(56,189,248,.6);
-    margin-bottom:25px;
+    border:6px solid #38bdf8;
+
+    box-shadow:
+        0 0 20px rgba(56,189,248,.8),
+        0 0 50px rgba(56,189,248,.5),
+        0 15px 40px rgba(0,0,0,.4);
+
+    margin-bottom:30px;
+    transition:.4s ease;
+}
+
+.profile-img:hover{
+    transform:scale(1.05);
 }
 
 .hero-section h1{
-    font-size:3rem;
+    font-size:3.5rem;
     font-weight:700;
+    margin-bottom:10px;
 }
 
 .hero-section h3{
@@ -59,6 +70,7 @@ body{
     font-size:1.1rem;
     color:#cbd5e1;
     margin-bottom:30px;
+    line-height:1.8;
 }
 
 /* =========================
@@ -67,17 +79,23 @@ body{
 
 .btn{
     margin:5px;
-    border-radius:10px !important;
+    border-radius:12px !important;
     transition:.3s;
+    font-weight:600;
 }
 
 .btn:hover{
-    transform:translateY(-3px);
+    transform:translateY(-4px);
 }
 
 /* =========================
    SECTION HEADINGS
 ========================= */
+
+section{
+    padding-top:40px;
+    padding-bottom:40px;
+}
 
 section h2{
     color:#38bdf8;
@@ -103,17 +121,17 @@ section h2{
     0 15px 40px rgba(0,0,0,.4);
 }
 
+.card h3,
+.card h4{
+    color:#38bdf8;
+}
+
 /* =========================
    SERVICE CARDS
 ========================= */
 
 .service-card{
     height:100%;
-}
-
-.service-card h4{
-    color:#38bdf8;
-    margin-bottom:15px;
 }
 
 /* =========================
@@ -124,6 +142,7 @@ section h2{
     padding:10px 14px;
     margin:5px;
     font-size:.9rem;
+    border-radius:30px;
 }
 
 /* =========================
@@ -131,30 +150,13 @@ section h2{
 ========================= */
 
 .project-img{
+    width:100%;
     transition:.4s;
     border-radius:15px;
 }
 
 .project-img:hover{
     transform:scale(1.04);
-}
-
-.card h3{
-    color:#38bdf8;
-    margin-bottom:15px;
-}
-
-/* =========================
-   STATS
-========================= */
-
-.stats-section h2{
-    font-size:3rem;
-    font-weight:700;
-}
-
-.stats-section p{
-    color:#cbd5e1;
 }
 
 /* =========================
@@ -178,9 +180,14 @@ section h2{
    FOOTER
 ========================= */
 
-footer{
-    background:#020617 !important;
+.footer{
+    background:#020617;
     color:#94a3b8;
+    padding:25px 0;
+}
+
+.footer p{
+    margin:0;
 }
 
 /* =========================
@@ -207,7 +214,7 @@ footer{
 @media(max-width:768px){
 
     .hero-section h1{
-        font-size:2.2rem;
+        font-size:2.4rem;
     }
 
     .hero-section h3{
@@ -215,8 +222,12 @@ footer{
     }
 
     .profile-img{
-        width:140px;
-        height:140px;
+        width:220px;
+        height:220px;
+    }
+
+    .hero-text{
+        font-size:1rem;
     }
 
 }
